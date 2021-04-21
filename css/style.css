@@ -1,0 +1,37 @@
+label{
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+form{
+    margin: 0 auto;
+    width: 400px;
+}
+.ppal{
+    display: block;
+    margin: 0 auto;
+    width: 510px;
+    color: #666666;
+    font-family: Arial;
+}
+input, textarea{
+    width: 380px;
+    height: 27px;
+    background: #8f8787;
+    border: 2px solid #f6f6f6;
+    font-size: 15px;
+    color: #ffffff;
+}
+textarea{
+    height: 200px;
+}
+.title{
+    text-align: center;
+}
+.submit{
+    width: 85px;
+    height: 35px;
+    border: none;
+    margin-top: 22px;
+    cursor: pointer;
+}

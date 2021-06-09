@@ -1,1 +1,20 @@
-{}
+{
+    "name": "wramirez83/shop",
+    "description": "Proyecto de Tienda de Barrio",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wilson Ramirez Zuluaga",
+            "email": "wilson.rz@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Public\\": "public/",
+            "Src\\": "src/"
+        }
+    }
+}

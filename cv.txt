@@ -1,7 +1,0 @@
-Nombre: Juanita
-Apellido: Vergara
-Edad: 20
-Lengaujes de Programación
-IDE:Visual SC, AtomPHP
-JAVA
-PYTHON

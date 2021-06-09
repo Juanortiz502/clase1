@@ -1,0 +1,9 @@
+#Activamos la re escritura
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule \.(gif|png|jpg|css|js|ttf|pdf)$ -[L]
+RewriteBase /
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

@@ -1,5 +1,6 @@
 <?php
 namespace Src;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 abstract class Controller{
     protected $view;
@@ -10,6 +11,7 @@ abstract class Controller{
     abstract function index();
 
     public function Model($nameModel){
+        
 
     }
 

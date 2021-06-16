@@ -14,7 +14,7 @@ class Run{
                 $controller->$loadMethod();
                
             } catch (\Throwable $th) {
-                echo "Error de Carga";
+                echo "Error de Carga" . $th;
             }
         }else{
             echo "No se LEEE";

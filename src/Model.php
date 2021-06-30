@@ -21,13 +21,11 @@ class Model{
             'collaction' => 'utf8mb4_spanish2_ci',
             'prefix' => ''
         ];
-        //print_r($con);
         $this->boot($con);
     }
     public function boot($con){
         $capsule = new Capsule;
         $capsule->addConnection($con);
-        
         $capsule->bootEloquent();
     }
 }

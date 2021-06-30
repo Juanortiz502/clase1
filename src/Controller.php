@@ -4,8 +4,10 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 abstract class Controller{
     protected $view;
-    public function __construct(){
+    public $args;
+    public function __construct($args){
         $this->view = new View();
+        $this->args = $args;
     }
 
     abstract function index();

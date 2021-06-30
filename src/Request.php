@@ -26,7 +26,6 @@ class Request{
         return $this->controller;
     }
     public function getMethod():string{
-       
         return $this->method ?: $this->config->getMethodDefault() ;
     }
     public function getArg():array{

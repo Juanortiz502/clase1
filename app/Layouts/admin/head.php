@@ -1,3 +1,8 @@
+<?php session_start();
+if(!isset($_SESSION['email'])){
+    header('location: /index/index/e02');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,5 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-
+<div class="alert alert-info">
+    Esto es el Admin
+</div>
     

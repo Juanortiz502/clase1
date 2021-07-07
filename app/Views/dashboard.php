@@ -17,6 +17,7 @@ echo $_SESSION['name'] . ' ' . $_SESSION['lastName'];
                     <tr>
                         <th>Tarea</th>
                         <th>Estado</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,6 +25,9 @@ echo $_SESSION['name'] . ' ' . $_SESSION['lastName'];
                         <tr>
                             <td> <?php echo $task->task;?></td>
                             <td><?php echo $task->status;?></td>
+                            <td>
+                                <a href="/index/updateTask?id=<?php echo $task->id;?>"class="btn btn-danger">Cambiar</a>
+                            </td>
                         </tr>
                     <?php endforeach?>
                 </tbody>
@@ -36,6 +40,7 @@ echo $_SESSION['name'] . ' ' . $_SESSION['lastName'];
                     <tr>
                         <th>Tarea</th>
                         <th>Estado</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,6 +48,9 @@ echo $_SESSION['name'] . ' ' . $_SESSION['lastName'];
                         <tr>
                             <td> <?php echo $task->task;?></td>
                             <td><?php echo $task->status;?></td>
+                            <td>
+                                <a href="/index/deleteTask?id=<?php echo $task->id;?>"class="btn btn-danger">Eliminar</a>
+                            </td>
                         </tr>
                     <?php endforeach?>
                 </tbody>

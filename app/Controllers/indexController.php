@@ -67,6 +67,7 @@ class indexController extends Controller{
         }
     }
     public function dashboard(){
+        /**SELECT * FROM tasks WHERE status = 'Pendiente' */
         $this->view->pendingTasks = Task::where('status', 'Pendiente')->get();
         $this->view->doneTasks = Task::where('status', 'Finalizado')->get();
         //$this->view->render(vista, layout); 
@@ -78,9 +79,22 @@ class indexController extends Controller{
         header('location: /index/index/s01');
     }
     public function addTask(){
+        /**INSERT INTO tasks (task) VALUES($_POST['task']); */
         $task = new Task();
         $task->task = $_POST['task'];
         $task->save();
+        // Task::insert(['task' => $_POST['task']]);
+        header('location: /index/dashboard');
+    }
+    public function updateTask(){
+        $id = $_GET['id'];
+        Task::where('id', $id)->update(['status' => 'Finalizado']);
+        header('location: /index/dashboard');
+    }
+    public function deleteTask(){
+        $id = $_GET['id'];
+        $task = Task::find($id);
+        $task->delete();
         header('location: /index/dashboard');
     }
 }

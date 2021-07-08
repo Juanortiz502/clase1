@@ -86,15 +86,17 @@ class indexController extends Controller{
         // Task::insert(['task' => $_POST['task']]);
         header('location: /index/dashboard');
     }
-    public function updateTask(){
-        $id = $_GET['id'];
-        Task::where('id', $id)->update(['status' => 'Finalizado']);
-        header('location: /index/dashboard');
+    public function editTask(){
+        //Variable por metodo get => $_GET: array
+        $id =$_GET['id'];
+        Task::where('id',$id)->update(['status' => 'Finalizado']);//Modifica el Registro
+        header('location: /index/dashboard');//Redireccionar a dashboard
     }
     public function deleteTask(){
-        $id = $_GET['id'];
+        $id =$_GET['id'];
         $task = Task::find($id);
         $task->delete();
-        header('location: /index/dashboard');
+        header('location: /index/dashboard');//Redireccionar a dashboard
     }
+   
 }
